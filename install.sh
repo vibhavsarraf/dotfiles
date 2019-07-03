@@ -21,6 +21,7 @@ echo "Creating symlinks"
 ln -s $PWD/zshrc ~/.zshrc
 ln -s $PWD/vimrc ~/.vimrc
 ln -s $PWD/nvim ~/.config/nvim
+ln -s $PWD/tmux.conf ~/.tmux.conf
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 echo "Installing Binaries"
