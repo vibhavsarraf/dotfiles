@@ -109,4 +109,10 @@ export GOPATH=$HOME/work
 export PATH=$PATH:/usr/local/go
 
 DEFAULT_USER=$(whoami)
+
+#############
+#  Aliases  #
+#############
+
+alias vim=nvim
 # zprof

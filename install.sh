@@ -11,7 +11,10 @@ if [ ! -d "$HOME/.config" ]; then
     mkdir -p "$HOME/.config"
 fi
 
-ln -s $PWD/oh-my-zsh ~/.oh-my-zsh
+curl -Lo install1.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+sh install1.sh --unattended
+rm install1.sh
+rm ~/.zshrc
 ln -s $PWD/zshrc ~/.zshrc
 ln -s $PWD/vimrc ~/.vimrc
 ln -s $PWD/nvim ~/.config/nvim

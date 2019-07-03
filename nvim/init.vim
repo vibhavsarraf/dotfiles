@@ -1,3 +1,4 @@
+syntax on
 " Searching
 set ignorecase " case insensitive searching
 set smartcase " case-sensitive if expresson contains a capital letter
