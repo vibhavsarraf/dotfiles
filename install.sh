@@ -1,7 +1,5 @@
 #bin/bash
 
-#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 echo -e "Creating ~/.config Directory"
 echo "=============================="
 if [ ! -d "$HOME/.config" ]; then
@@ -30,3 +28,7 @@ bin_files=$( echo bin/* )
 for file in $bin_files; do
   cp $file /usr/local/bin/
 done
+
+echo "Installing vim-plug from neovim"
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
