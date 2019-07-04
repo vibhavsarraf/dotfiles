@@ -106,7 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export GOPATH=$HOME/work
-export PATH=$PATH:/usr/local/go
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin
 
 DEFAULT_USER=$(whoami)
 

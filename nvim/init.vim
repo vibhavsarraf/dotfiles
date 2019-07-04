@@ -1,4 +1,16 @@
+filetype plugin on
 syntax on
+
+" Plugins
+call plug#begin()
+" Plug 'roxma/nvim-completion-manager'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
 " Searching
 set ignorecase " case insensitive searching
 set smartcase " case-sensitive if expresson contains a capital letter
@@ -37,6 +49,10 @@ vmap L $
 vmap H ^
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Enable . command in Visusl Mode
 vnoremap . :normal .<cr>
@@ -47,9 +63,15 @@ set clipboard=unnamed
 " Coloring
 set termguicolors
 
-" Plugins
-call plug#begin()
-Plug 'roxma/nvim-completion-manager'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-call plug#end()
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Mouse
+set mouse=a
+
+" Nerdtree Setup
+nmap <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
