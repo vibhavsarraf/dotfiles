@@ -17,6 +17,7 @@ rm ~/.zshrc
 echo "Creating symlinks"
 
 ln -s $PWD/zshrc ~/.zshrc
+ln -s $PWD/bashrc ~/.bashrc
 ln -s $PWD/vimrc ~/.vimrc
 ln -s $PWD/nvim ~/.config/nvim
 ln -s $PWD/tmux.conf ~/.tmux.conf

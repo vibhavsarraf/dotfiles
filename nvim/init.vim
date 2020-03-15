@@ -9,6 +9,7 @@ Plug 'honza/vim-snippets'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 " Searching
