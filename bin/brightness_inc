@@ -1,0 +1,8 @@
+#!/bin/bash
+
+CUR_BRIGHTNESS=$(xrandr --current --verbose | grep -m 1 "Brightness:" | cut -f2 -d' ')
+if (( $(echo "$CUR_BRIGHTNESS > 0.9" | bc -l) )); then
+    echo "Not allowed"
+else
+	xrandr --output eDP-1-1 --brightness $(echo "$CUR_BRIGHTNESS + 0.1" | bc)
+fi

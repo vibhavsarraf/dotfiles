@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if (( $(echo "$1 < 0.1" | bc -l) )); then
+    echo "Not allowed"
+else
+    xrandr --output eDP-1-1 --brightness $1
+fi
