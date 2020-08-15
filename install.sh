@@ -1,6 +1,4 @@
-#bin/bash
-
-echo -e "Creating ~/.config Directory"
+#bin/bash echo -e "Creating ~/.config Directory"
 echo "=============================="
 if [ ! -d "$HOME/.config" ]; then
     echo "Creating ~/.config"
@@ -13,6 +11,12 @@ curl -Lo install1.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/ma
 sh install1.sh --unattended
 rm install1.sh
 rm ~/.zshrc
+
+echo "Insalling software"
+sudo apt-get install software-properties-common
+sudo apt-get install python-dev python-pip python3-dev python3-pip
+sudo apt update
+sudo apt install neovim
 
 echo "Creating symlinks"
 
@@ -27,9 +31,9 @@ echo "Installing Binaries"
 
 bin_files=$( echo bin/* )
 for file in $bin_files; do
-  cp $file /usr/local/bin/
+  sudo cp $file /usr/local/bin/
 done
 
 echo "Installing vim-plug from neovim"
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+sudo curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
