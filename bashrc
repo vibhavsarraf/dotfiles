@@ -119,8 +119,6 @@ fi
 alias xo=xdg-open
 alias bgt=brightness
 export PATH=$PATH:/home/vibhav/.cargo/bin
-export KITE_PASS=temppassword
-export KITE_TWOFA=146916
 #export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$"
 export PS1="\A \w\$(__git_ps1 ' (%s)')$ "
 #export PS1="\\w\$(__git_ps1 ' (%s)') \$ "
@@ -128,4 +126,4 @@ export PATH=$PATH:/usr/local/go/bin
 alias suspend="sudo pm-suspend"
 alias upd="sudo apt update"
 alias upg="sudo apt upgrade"
-alias headphones="until bluetoothctl connect 58:85:E9:0E:BD:ED; do  echo ...  ; sleep 1; done"
+alias bl="bluetoothctl connect 58:85:E9:0E:BD:ED"
