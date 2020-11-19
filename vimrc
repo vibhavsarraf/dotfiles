@@ -85,6 +85,8 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
+set mouse=v
+
 let mapleader = ','
 
 "Stop indentation

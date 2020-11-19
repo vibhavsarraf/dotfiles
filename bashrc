@@ -127,3 +127,11 @@ alias suspend="sudo pm-suspend"
 alias upd="sudo apt update"
 alias upg="sudo apt upgrade"
 alias bl="bluetoothctl connect 58:85:E9:0E:BD:ED"
+
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile
+fi
