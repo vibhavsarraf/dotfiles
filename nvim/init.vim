@@ -76,3 +76,12 @@ set mouse=a
 " Nerdtree Setup
 nmap <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+nmap <F7> :w<CR>:!python3 %<CR>
+" Doesn't work
+autocmd filetype py nmap <F5> :w<CR>:!python3 %<CR>
+
+" Copy
+nmap ,yw viw"+y
+nmap ,ya ggvG"+y
+vmap ,Y "+y

@@ -102,9 +102,10 @@ set relativenumber
 set showcmd
 autocmd filetype javascript nmap <F5> :w<CR>:node %<CR>
 autocmd filetype cpp nmap <F5> :w<cr> :!g++ % -std=c++17 && ./a.out <CR>
-map <F6> :w<cr> :!node % <CR>
-map <F7> :w<cr> :!python3 % <CR>
-map <F8> :w<cr> :!go run % <cr>
+autocmd filetype py nmap <F5> :w<cr> :!python3 % <CR>
+nmap <F6> :w<CR>:!node %<CR>
+nmap <F7> :w<CR>:!python3 %<CR>
+nmap <F8> :w<CR>:!go run %<cr>
 "nmap <F4> :source ~/.vimrc<CR>
 
 nmap ,, :w<cr>

@@ -18,6 +18,7 @@ sudo apt-get install python-dev python-pip python3-dev python3-pip
 sudo apt update
 sudo apt install neovim
 sudo apt install xclip
+sudo apt install tmux
 
 echo "Creating symlinks"
 

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+x="^[aeiouh]*"
+a=(s "(t|d)" n m r l "(sh|ch)" "(k|c)" "(f|v)" "(p|b)")
+inp=$1
+for (( i=0; i<${#inp}; i++ ));
+do
+    x="${x}${a[${inp:$i:1}]}[aeiouh]*"
+done
+x="${x}\$"
+echo $x
+grep -Ei $x /usr/share/dict/*
